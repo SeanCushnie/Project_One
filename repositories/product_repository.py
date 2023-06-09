@@ -26,3 +26,6 @@ def select_all():
     results = run_sql(sql)
     for row in results:
         manufacturer = manufacturer_repository.select(row['id'])
+        product = Product(manufacturer, row['title'], row['descripton'], row['stock_quantity'], row['buying_cost'], row['selling_cost'], row['id'])
+        products.append(product)
+    return products

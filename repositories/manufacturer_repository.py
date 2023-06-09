@@ -28,7 +28,7 @@ def select(id):
 
 def select_all():
     manufacturers = []
-    sql = "SELECT * FROM manufacturer"
+    sql = "SELECT * FROM manufacturers"
     results = run_sql(sql)
     for row in results:
         manufacturer = Manufacturer(row['name'], row['id'])

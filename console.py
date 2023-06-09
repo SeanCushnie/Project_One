@@ -8,7 +8,7 @@ product_repository.delete_all()
 manufacturer_repository.delete_all()
 
 manufacturer_1 = Manufacturer("Hawke")
-manufacturer_repository.save("manufacturer_1")
+manufacturer_repository.save(manufacturer_1)
 manufacturer_2 = Manufacturer("Chalmit")
-manufacturer_repository.save("manufacturer_2")
-manufacturer_repository.select_all
+manufacturer_repository.save(manufacturer_2)
+manufacturer_repository.select_all()
