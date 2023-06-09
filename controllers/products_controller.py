@@ -3,3 +3,5 @@ from flask import Blueprint
 from repositories import product_repository
 from repositories import manufacturer_repository
 from models.product import Product
+
+products_blueprint = Blueprint("products", __name__)
