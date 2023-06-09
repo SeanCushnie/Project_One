@@ -1,6 +1,7 @@
 header {
     display: flex;
-    justify-content:space-between
+    justify-content:space-between;
+    align-items: center
 }
 .Menu {
     display: flex;
@@ -37,7 +38,9 @@ body > header > h1 > b{
     color: rgb(224, 94, 94)
 }
 body > header > p {
-    margin: 30px
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .Menu li a {
     color: whitesmoke;
@@ -66,12 +69,24 @@ body > header > p {
 .product_container span{
     color:red
 }
-footer{
-    background-color: rgb(57, 57, 57);
+.wrapper {
+    min-height: 100vh;
     display: flex;
-    justify-content:space-between
+    flex-direction: column;
 }
+footer{
+        background-color: rgb(57, 57, 57);
+        color: whitesmoke;
+        padding: 10px;
+        position: fixed;
+        left: 20px;
+        right: 20px;
+        bottom: 0;
+    }
 footer > p {
     color: whitesmoke;
-    vertical-align: bottom
+    vertical-align: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
