@@ -9,6 +9,14 @@ def delete_all():
     sql = "DELETE FROM products"
     run_sql(sql)
 
+def save(product):
+    sql = "INSERT INTO products (id, title, description, stock_quantity, buying_cost, selling_price) VALUES (%, %, %) RETURNING *"
+    values = [product.manufacturer.id, product.title, product.description, product.stock_quantity, product.buying_cost, product.selling_price]
+    results = run_sql(sql, values)
+    id = results[0]['id']
+    product.id = id
+    return product
+
 def select(id):
     product = None
     sql = "SELECT * FROM products WHERE id = %s"

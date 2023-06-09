@@ -12,3 +12,8 @@ manufacturer_repository.save(manufacturer_1)
 manufacturer_2 = Manufacturer("Chalmit")
 manufacturer_repository.save(manufacturer_2)
 manufacturer_repository.select_all()
+
+product_1 = Product(manufacturer_1, "501/453/UNIV/A/M20/BRASS", "20mm gland, suitable for use in hazardous areas where cold-flow could be a potential issue", 10, 2, 15)
+product_repository.save(product_1)
+
+
