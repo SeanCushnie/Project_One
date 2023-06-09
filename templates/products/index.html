@@ -12,6 +12,11 @@
     </div>
     <div class="description">
         <<a href="/products/{{product.id}}"> {{product.description}} </a>
+        <span> 
+            <a href="/products/{{product.stock_quantity}}"></a>
+            {% if product.stock_quantity < 10 %}
+            <p> LOW STOCK! </p> 
+            {% endif %} </span>
     </div>
     </div>
 {% endfor %}
