@@ -18,13 +18,15 @@ def save(manufacturer):
 
 
 def select(id):
-    Manufacturer = None
+    manufacturer = None
     sql = "SELECT * FROM manufacturers WHERE id = %s"
     values = [id]
-    result = run_sql(sql, values)[0]
-    if result is not None:
-        manufacturer = Manufacturer(result['name'],result['id'] )
+    result = run_sql(sql, values)
+    if result: 
+        result = result[0]
+        manufacturer = Manufacturer(result['name'], result['id'])
     return manufacturer
+
 
 def select_all():
     manufacturers = []
