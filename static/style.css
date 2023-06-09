@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(25, 25, 25);
+    color: whitesmoke
+}
+body{
+    margin: 30px
+}
+body > header > h1{
+    background-color:rgb(57, 57, 57)
+}
+.Menu li a {
+    color: yellow;
+}
+.product_container .title a {
+    color: yellow;
+}
+#container h2,
+#container p {
+    display: inline;
+    vertical-align: top;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+#container h3,
+#container p {
+    display: inline;
+    vertical-align: top;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+.product_container span{
+    color:red
+}

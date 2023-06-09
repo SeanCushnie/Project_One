@@ -3,23 +3,25 @@
 {% block content%}
 
 {% for product in product_list%}
-    <div class="product">
-        <div class="title">
-            <h2>Product Name: </h2> <a href="/products/{{product.id}}">{{product.title}}</a> 
-        </div>
-        <div class="productManufacturerName">
-            <h3>Manufacturer Name: </h3> {{product.manufacturer.name}}
-        </div>
-        <div class="description">
-            <h3>Product Description: </h3> {{product.description}}
-        </div>
-        <div class="stock_quantity"> 
-            <h3>Stock Level: </h3> {{product.stock_quantity}} 
-            {% if product.stock_quantity < 10 %}
-                <p> LOW STOCK! </p> 
-            {% endif %}
-        </div>
+    <div id="container">
+        <div class="product_container">
+            <div class="title">
+                <h2>Product Name: </h2> <a href="/products/{{product.id}}">{{product.title}}</a> 
+            </div>
+            <div class="productManufacturerName">
+                <h3>Manufacturer Name: </h3> {{product.manufacturer.name}}
+            </div>
+            <div class="description">
+                <h3>Product Description: </h3> {{product.description}}
+            </div>
+            <div class="stock_quantity"> 
+                <h3>Stock Level: </h3> {{product.stock_quantity}} 
+                    {% if product.stock_quantity < 10 %}
     </div>
+                        <span> LOW STOCK! </span> 
+                    {% endif %}
+            </div>
+        </div>
     <hr>
 {% endfor %}
 {% endblock %}
