@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content%}
+
+{% for product in product_list%}
+    <div class="product">
+        <div class="content">
+            {{product.manufacturer.name}}
+        </div>
+    </div>
+{% endfor %}
+{% endblock %}
