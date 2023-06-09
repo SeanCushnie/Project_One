@@ -1,0 +1,5 @@
+from models.product import Product
+from models.manufacturer import Manufacturer
+
+import repositories.product_repository as product_repository
+import repositories.manufacturer_repository as manufacturer_repository 
