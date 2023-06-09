@@ -5,7 +5,7 @@ header {
 .Menu {
     display: flex;
     list-style-type: none;
-    margin: 20px
+    margin: 35px
 }
 
 .Menu li {
@@ -20,20 +20,30 @@ header {
     margin-right: 10px;
 }
 body{
-    background-color: rgb(25, 25, 25);
-    color: whitesmoke
+    background-color: whitesmoke;
+    color: black
 }
 body{
     margin: 20px
 }
 body > header {
-    background-color:rgb(57, 57, 57)
+    background-color:rgb(57, 57, 57);
+    color: whitesmoke
+}
+body > header > h1 {
+    margin-left: 10px
+}
+body > header > h1 > b{
+    color: rgb(224, 94, 94)
+}
+body > header > p {
+    margin: 30px
 }
 .Menu li a {
-    color: yellow;
+    color: whitesmoke;
 }
 .product_container .title a {
-    color: yellow;
+    color: rgb(88, 36, 245);
 }
 
 .container2 {
@@ -55,4 +65,13 @@ body > header {
 }
 .product_container span{
     color:red
+}
+footer{
+    background-color: rgb(57, 57, 57);
+    display: flex;
+    justify-content:space-between
+}
+footer > p {
+    color: whitesmoke;
+    vertical-align: bottom
 }

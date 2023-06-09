@@ -16,11 +16,11 @@
             </div>
             <div class="stock_quantity"> 
                 <h3>Stock Level: </h3> {{product.stock_quantity}} 
-                    {% if product.stock_quantity > 0 and product.stock_quantity < 10 %}
     </div>
+                    {% if product.stock_quantity > 0 and product.stock_quantity < 10 %}
                         <span> LOW STOCK! </span> 
                     {% elif product.stock_quantity < 1 %}
-                        <span> OUT OF STOCK!</span>
+                        <span> <b>OUT OF STOCK!</b></span>
                     {% endif %}
             </div>
         </div>
