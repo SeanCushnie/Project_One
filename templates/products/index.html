@@ -4,11 +4,14 @@
 
 {% for product in product_list%}
     <div class="product">
-        <div class="content">
+        <div class="productManufacturerName">
             {{product.manufacturer.name}}
         </div>
     <div class="title">
         <a href="/products/{{product.id}}">{{product.title}}</a>
+    </div>
+    <div class="description">
+        <<a href="/products/{{product.id}}"> {{product.description}} </a>
     </div>
     </div>
 {% endfor %}
