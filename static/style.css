@@ -1,11 +1,32 @@
+header {
+    display: flex;
+    justify-content:space-between
+}
+.Menu {
+    display: flex;
+    list-style-type: none;
+    margin: 20px
+}
+
+.Menu li {
+    margin-right: 20px;
+}
+
+.Menu li:first-child {
+    margin-left: 0;
+}
+
+.Menu li:not(:last-child) {
+    margin-right: 10px;
+}
 body{
     background-color: rgb(25, 25, 25);
     color: whitesmoke
 }
 body{
-    margin: 30px
+    margin: 20px
 }
-body > header > h1{
+body > header {
     background-color:rgb(57, 57, 57)
 }
 .Menu li a {
@@ -13,6 +34,10 @@ body > header > h1{
 }
 .product_container .title a {
     color: yellow;
+}
+
+.container2 {
+    margin-top: 10px
 }
 #container h2,
 #container p {

@@ -15,6 +15,7 @@ manufacturer_repository.select_all()
 
 product_1 = Product(manufacturer_1, "501/453/UNIV/A/M20/BRASS", "20mm gland, suitable for use in hazardous areas where cold-flow could be a potential issue", 10, 5, 15)
 product_repository.save(product_1)
-product_2 = Product(manufacturer_2, "EVXB/20L/LE", "Non-Emergency Floodlight, Zone 1, 20,980lm", 5, 2500, 3500)
+product_2 = Product(manufacturer_2, "EVXB/20/LE", "Non-Emergency Floodlight, Zone 1, 20,980lm", 5, 2500, 3500)
 product_repository.save(product_2)
-
+product_3 = Product(manufacturer_2, "EVXB/10/LE", "Non-Emergency Floodlight, Zone 1, 20,980lm", 0, 2500, 3500)
+product_repository.save(product_3)
