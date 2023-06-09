@@ -25,3 +25,12 @@ def select(id):
     if result is not None:
         manufacturer = Manufacturer(result['name'],result['id'] )
     return manufacturer
+
+def select_all():
+    manufacturers = []
+    sql = "SELECT * FROM manufacturer"
+    results = run_sql(sql)
+    for row in results:
+        manufacturer = Manufacturer(row['name'], row['id'])
+        manufacturers.append(manufacturer)
+    return manufacturers
