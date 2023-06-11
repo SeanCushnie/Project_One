@@ -1,0 +1,13 @@
+{% extends base.html %}
+{% block content %}
+
+<div>
+    <h2> {{product.title}} </h2>
+    <hr>
+    <h3> Product Description:   {{product.description}} </p>
+    <h3> Stock Quantity:        {{product.stock_quantity}} </p>
+    <h3> Buying Cost (£):       {{product.buying_cost}} </p>
+    <h3> Selling Price (£):     {{product.selling_price}} </p>
+    <h3> Gross Profit (£):      {% product.selling_price - product.buying_cost %} </p>
+    
+</div>

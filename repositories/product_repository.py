@@ -23,7 +23,7 @@ def select(id):
     values = [id]
     result = run_sql(sql, values)[0]
     if result is not None:
-        manufacturer = manufacturer_repository.select(result['id'])
+        manufacturer = manufacturer_repository.select(result['manufacturer_id'])
         product = Product(manufacturer, result['title'],result['description'], result['stock_quantity'], result['buying_cost'],result['selling_price'],result['id'])
     return product
 

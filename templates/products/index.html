@@ -6,13 +6,13 @@
     <div id="container">
         <div class="product_container">
             <div class="title">
-                <h2>Product Name: </h2> <a href="/products/{{product.id}}">{{product.title}}</a> 
+                <h2>Product Name: </h2> {{product.title}}
             </div>
             <div class="productManufacturerName">
                 <h3>Manufacturer Name: </h3> {{product.manufacturer.name}}
             </div>
-            <div class="description">
-                <h3>Product Description: </h3> {{product.description}}
+            <div class="product_description">
+                <h3> Product Description:</h3> {{product.description}}
             </div>
             <div class="stock_quantity"> 
                 <h3>Stock Level: </h3> {{product.stock_quantity}} 
@@ -23,6 +23,16 @@
                         <span> <b>OUT OF STOCK!</b></span>
                     {% endif %}
             </div>
+            <div class="buying_cost">
+                <h3> Buying Cost (£): </h3>{{product.buying_cost}} 
+            </div>
+            <div class="selling_price">
+                <h3> Selling Price (£): </h3> {{product.selling_price}}
+            </div>
+            <div class="Gross Profit">
+                <h3> Gross Profit (£): </h3> {{ product.selling_price - product.buying_cost }}
+            </div>
+    
         </div>
     <hr>
 {% endfor %}
