@@ -37,3 +37,8 @@ def select_all():
         product = Product(manufacturer, row['title'], row['description'], row['stock_quantity'], row['buying_cost'], row['selling_price'], row['id'])
         products.append(product)
     return products
+
+def update(product):
+    sql="UPDATE products SET (manufacturer_id, title, description, stock_quantity, buying_cost, selling_price) = (%s, %s, %s, %s, %s, %s) WHERE id =%s"
+    values = [product.manufacturer.id, product.title, product.description, product.stock_quantity, product.buying_cost, product.selling_price]
+    run_sql(sql, values)

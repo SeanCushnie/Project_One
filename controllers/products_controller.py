@@ -16,10 +16,16 @@ def products():
     products = product_repository.select_all()
     return render_template("products/index.html", product_list = products)
 
-@products_blueprint.route("/products/<id>", methods=['GET'])
+@products_blueprint.route("/products/<int:id>", methods=['GET'])
 def show_product(id):
     product = product_repository.select(id)
     if product is not None:
         return render_template('products/show.html', product=product)
     else:
-        return "Product not found"
+        return redirect("/products")
+    
+@products_blueprint.route("/products/<id>/edit", methods = ['GET'])
+def edit_product(id):
+    product = product_repository.select(id)
+    manufacturers = manufacturer_repository.select_all()
+    return render_template('products/edit.html', product = product, all_manufacturers = manufacturers)
