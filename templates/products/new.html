@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form action="/products" method="post">
+
+
+<div>
+    <label for="manufacturer_id">Manufacturer:</label>
+    <select id="manufacturer_id" name="manufacturer_id">
+        {% for manufacturer in all_manufacturers %}
+        <option value="{{ manufacturer.id }}">{{ manufacturer.name }}</option>
+        {% endfor %}
+    </select>
+</div>
+
+<div>
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" placeholder="Title" required autofocus>
+</div>
+
+ <div>
+    <label for="description">Description:</label>
+    <input type="text" id="description" name="description" placeholder="description" required autofocus>
+</div>
+
+<div>
+    <label for="stock_quantity">Stock Quantity:</label>
+    <input type="integer" id="stock_quantity" name="stock_quantity" placeholder="stock_quantity" required>
+</div>
+
+<div>
+    <label for="buying_cost">Buying Cost:</label>
+    <input type="integer" id="buying_cost" name="buying_cost" placeholder="buying_cost" required>
+</div>
+
+<div>
+    <label for="selling_price">Selling Price:</label>
+    <input type="integer" id="selling_price" name="selling_price" placeholder="selling_price" required>
+</div>
+
+<button type="submit">Add Product</button>
+
+</form>
+
+{% endblock %}
