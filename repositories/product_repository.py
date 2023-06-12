@@ -28,7 +28,10 @@ def select(id):
         product = Product(manufacturer, result['title'],result['description'], result['stock_quantity'], result['buying_cost'],result['selling_price'],result['id'] )
     return product
 
-
+def delete(id):
+    sql = "DELETE  FROM products WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
 
 def select_all():
     products = []
@@ -41,7 +44,10 @@ def select_all():
     return products
 
 def update(product):
-    sql="UPDATE products SET (manufacturer_id, title, description, stock_quantity, buying_cost, selling_price) = (%s, %s, %s, %s, %s, %s, %s) WHERE id =%s"
-    values = [product.manufacturer.id, product.title, product.description, product.stock_quantity, product.buying_cost, product.selling_price]
-    print(values)
+    sql="UPDATE products SET (manufacturer_id, title, description, stock_quantity, buying_cost, selling_price) = (%s, %s, %s, %s, %s, %s) WHERE id =%s"
+    print(product.id)
+    print(product.selling_price)
+    print(product.manufacturer.id)
+    values = [product.manufacturer.id, product.title, product.description, product.stock_quantity, product.buying_cost, product.selling_price, product.id]
+    # print(values)
     run_sql(sql, values)
