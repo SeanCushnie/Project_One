@@ -6,15 +6,21 @@ from models.product import Product
 
 products_blueprint = Blueprint("products", __name__)
 
+
+
 @products_blueprint.route("/")
 def index():
     products = product_repository.select_all()
     return render_template("products/index.html", products=products)
 
+
+
 @products_blueprint.route("/products")
 def products():
     products = product_repository.select_all()
     return render_template("products/index.html", product_list = products)
+
+
 
 @products_blueprint.route("/products/<id>", methods=['GET'])
 def show_product(id):
@@ -23,6 +29,8 @@ def show_product(id):
         return render_template('products/show.html', product=product)
     else:
         return redirect("/products")
+    
+
     
 @products_blueprint.route("/products/<id>/edit", methods = ['GET'])
 def edit_product(id):
