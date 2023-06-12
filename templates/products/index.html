@@ -32,6 +32,12 @@
             <div class="Gross Profit">
                 <h3> Gross Profit (£): </h3> {{ product.selling_price - product.buying_cost }}
             </div>
+            <div class="Margin">
+                <h3> Profit %: </h3> {{(product.selling_price - product.buying_cost) / product.selling_price * 100 }}
+                {% if product.selling_price < product.buying_cost %}
+                <p> NEGATIVE MARGIN!</p>
+                {% endif %}
+            </div>
             <div class="Edit Product"></div>
             <h3><a href="/products/{{product.id}}/edit">Edit Product</a></h3>
             <form class="delete-form" action="/products/{{product.id}}/delete" method="POST">
