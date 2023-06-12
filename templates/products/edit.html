@@ -8,7 +8,7 @@
             {% for manufacturer in all_manufacturers %}
             <option value="{{ manufacturer.id }}"
             {% if product.manufacturer.id == manufacturer.id %} selected="selected"{% endif %}>
-                {{ manufacturer.name() }}
+                {{ manufacturer.name }}
             </option>
             {% endfor %}
         </select>
@@ -22,16 +22,17 @@
         <input type="text" id="description" name="description" value="{{product.description}}" required placeholder="Enter the description for the product">
     </div>
     <div>
-        <label for="stock quantity">Stock Quantity</label>
+        <label for="stock quantity">Stock Quantity:</label>
         <input type="integer" id="stock_quantity" name="stock_quantity" value="{{product.stock_quantity}}" required placeholder="Enter the stock quantity for the product">
     </div>
     <div>
-        <label for="buying_cost">Buying Cost</label>
+        <label for="buying_cost">Buying Cost:</label>
         <input type="integer" id="buying_cost" name="buying_cost" value="{{product.buying_cost}}" required placeholder="Enter the buying cost for the product">
     </div>
     <div>
-        <label for="selling_price">Selling Price</label>
+        <label for="selling_price">Selling Price:</label>
         <input type="integer" id="selling_price" name="selling_price" value="{{product.selling_price}}" required placeholder="Enter the selling price for the product">
     </div>
-
+<button type="submit">Update Product</button>
 </form>
+{% endblock %}

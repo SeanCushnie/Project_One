@@ -16,7 +16,7 @@ def products():
     products = product_repository.select_all()
     return render_template("products/index.html", product_list = products)
 
-@products_blueprint.route("/products/<int:id>", methods=['GET'])
+@products_blueprint.route("/products/<id>", methods=['GET'])
 def show_product(id):
     product = product_repository.select(id)
     if product is not None:

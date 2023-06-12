@@ -21,11 +21,22 @@ def select(id):
     product = None
     sql = "SELECT * FROM products WHERE id = %s"
     values = [id]
-    result = run_sql(sql, values)[0]
-    if result is not None:
+    results = run_sql(sql, values)
+    if results:
+        result = results[0]
         manufacturer = manufacturer_repository.select(result['manufacturer_id'])
-        product = Product(manufacturer, result['title'],result['description'], result['stock_quantity'], result['buying_cost'],result['selling_price'],result['id'])
+        product = Product(manufacturer, result['title'],result['description'], result['stock_quantity'], result['buying_cost'],result['selling_price'],result['id'] )
     return product
+
+# def select(id):
+#     product = None
+#     sql = "SELECT * FROM products WHERE id = %s"
+#     values = [id]
+#     result = run_sql(sql, values)[0]
+#     if result is not None:
+#         manufacturer = manufacturer_repository.select(result['manufacturer_id'])
+#         product = Product(manufacturer, result['title'],result['description'], result['stock_quantity'], result['buying_cost'],result['selling_price'],result['id'])
+#     return product
 
 
 def select_all():
