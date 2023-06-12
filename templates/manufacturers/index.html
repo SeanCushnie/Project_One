@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content%}
+
+{% for manufacturer in manufacturer_list%}
+    <div id="container">
+        <div class="product_container">
+            <div class="name">
+                <h2>Manufacturer Name: </h2> {{manufacturer.name}}
+            </div>
+            <div class="Edit Manufacturer"></div>
+            <h3><a href="/manufacturers/{{manufacturer.id}}/edit">Edit Manufacturer</a></h3>
+        </div>
+    <hr>
+{% endfor %}
+{% endblock %}

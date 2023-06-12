@@ -36,3 +36,9 @@ def select_all():
         manufacturer = Manufacturer(row['name'], row['id'])
         manufacturers.append(manufacturer)
     return manufacturers
+
+def update(manufacturer):
+    sql="UPDATE manufacturers SET (name) = (%s) WHERE id =%s"
+    values = [manufacturer.name]
+    print(values)
+    run_sql(sql, values)
