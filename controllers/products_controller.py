@@ -101,12 +101,21 @@ def edit_manufacturer(id):
 @products_blueprint.route("/manufacturers/<id>", methods=['POST'])
 def update_manufacturer(id):
     # pdb.set_trace()
-    manufacturer = manufacturer_repository.select(request.form['manufacturer_id'])
     name = request.form['name']
-    manufacturer = manufacturer(name, id)
+
+    manufacturer = Manufacturer(name, id)
     print(manufacturer.name)
     manufacturer_repository.update(manufacturer)
     return redirect('/manufacturers')
+
+# @products_blueprint.route("/manufacturers/<id>", methods=['POST'])
+# def update_manufacturer(id):
+#     # pdb.set_trace()
+#     name = request.form['name']
+#     manufacturer = manufacturer(name, id)
+#     print(manufacturer.name)
+#     manufacturer_repository.update(manufacturer)
+#     return redirect('/manufacturers')
 
 @products_blueprint.route("/products/<id>/delete", methods=['POST'])
 def delete_product(id):

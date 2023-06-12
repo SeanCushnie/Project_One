@@ -38,8 +38,8 @@ def select_all():
     return manufacturers
 
 def update(manufacturer):
-    sql="UPDATE manufacturers SET (name) = (%s) WHERE id =%s"
-    values = [manufacturer.name]
+    sql="UPDATE manufacturers SET name = (%s) WHERE id =%s"
+    values = [manufacturer.name, manufacturer.id]
     # print(values)
     run_sql(sql, values)
 
