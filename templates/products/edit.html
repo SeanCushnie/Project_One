@@ -7,7 +7,11 @@
         <select id="manufacturer" name="manufacturer_id">
             {% for manufacturer in all_manufacturers %}
             <option value="{{ manufacturer.id }}"
-            {% if product.manufacturer.id == manufacturer.id %} selected="selected"{% endif %}>
+            {% if product.manufacturer.id == manufacturer.id %} ### FIXED LOOP WITH BRACKETS
+            
+                selected="selected"
+            
+            {% endif %}>
                 {{ manufacturer.name }}
             </option>
             {% endfor %}

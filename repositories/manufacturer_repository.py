@@ -21,9 +21,9 @@ def select(id):
     manufacturer = None
     sql = "SELECT * FROM manufacturers WHERE id = %s"
     values = [id]
-    result = run_sql(sql, values)
-    if result: 
-        result = result[0]
+    results = run_sql(sql, values)
+    if results: 
+        result = results[0]
         manufacturer = Manufacturer(result['name'], result['id'])
     return manufacturer
 
