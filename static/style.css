@@ -69,7 +69,7 @@ body > header > p {
 .product_container span{
     color:red
 }
-.wrapper {
+.accomodateFooter {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -78,9 +78,11 @@ footer{
         background-color: rgb(57, 57, 57);
         color: whitesmoke;
         padding: 10px;
+        position: fixed;
+        align-items: center;
         left: 20px;
         right: 20px;
-        bottom: 0;
+        bottom: 0px;
     }
 footer > p {
     color: whitesmoke;
@@ -94,4 +96,18 @@ footer > p {
 }
 .advanced_options > p {
     color: red
+}
+
+.add_new_prouduct input {
+    display:flex;
+    align-items:center
+}
+
+.add_new_prouduct button {
+    margin-top:10px
+}
+
+video {
+    width: 100%;
+    height: 90%;
 }

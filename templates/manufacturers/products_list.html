@@ -1,9 +1,7 @@
 {% extends "base.html" %}
 
-Products by {{manufacturer.name}}
-
 {% block content%}
-
+<h3> <b> <u> Products by {{manufacturer.name}}:</u></b></h3>
 {% for product in product_list%}
     <div id="container">
         <div class="product_container">
@@ -32,7 +30,7 @@ Products by {{manufacturer.name}}
                 <h3> Gross Profit (£): </h3> {{ product.selling_price - product.buying_cost }}
             </div>
             <div class="Margin">
-                <h3> Profit %: </h3> {{(product.selling_price - product.buying_cost) / product.selling_price * 100 }}
+                <h3> Net Profit Margin %: </h3> {{(product.selling_price - product.buying_cost) / product.selling_price * 100 }}
                 {% if product.selling_price < product.buying_cost %}
                 <p> NEGATIVE MARGIN!</p>
                 {% endif %}
