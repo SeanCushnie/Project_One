@@ -8,7 +8,7 @@ CREATE TABLE manufacturers(
 
 CREATE TABLE products(
     id SERIAL PRIMARY KEY,
-    manufacturer_id INT NOT NULL REFERENCES manufacturers(id),
+    manufacturer_id INT NOT NULL REFERENCES manufacturers(id) ON DELETE CASCADE,
     title varchar(255),
     description varchar(255),
     stock_quantity INT NOT NULL,

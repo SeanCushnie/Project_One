@@ -16,3 +16,4 @@ product_1 = Product(manufacturer_1, "501/453/UNIV/A/M20/BRASS", "20mm gland, sui
 product_repository.save(product_1)
 product_2 = Product(manufacturer_2, "EVXB/20L/LE", "Non-Emergency Floodlight, Zone 1, 20980lm", 5, 2500, 3500)
 product_repository.save(product_2)
+
