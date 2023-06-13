@@ -49,7 +49,6 @@ def update(product):
     print(product.selling_price)
     print(product.manufacturer.id)
     values = [product.manufacturer.id, product.title, product.description, product.stock_quantity, product.buying_cost, product.selling_price, product.id]
-    # print(values)
     run_sql(sql, values)
 
 

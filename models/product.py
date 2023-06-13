@@ -7,7 +7,3 @@ class Product:
         self.buying_cost = buying_cost
         self.selling_price = selling_price
         self.id = id 
-
-
-## MISSING PRODUCT ID
-        
