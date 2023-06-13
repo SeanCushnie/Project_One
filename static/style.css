@@ -78,7 +78,6 @@ footer{
         background-color: rgb(57, 57, 57);
         color: whitesmoke;
         padding: 10px;
-        position: fixed;
         left: 20px;
         right: 20px;
         bottom: 0;
@@ -89,4 +88,10 @@ footer > p {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.advanced_options {
+    margin-top: 20px
+}
+.advanced_options > p {
+    color: red
 }
