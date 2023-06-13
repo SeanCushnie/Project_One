@@ -126,3 +126,9 @@ def delete_product(id):
 def delete_manufacturer(id):
     manufacturer_repository.delete(id)
     return redirect('/manufacturers')
+
+@products_blueprint.route("/manufacturers/<id>/showlist", methods=["GET"])
+def filter_products_by_manufacturer(id):
+    manufacturer = manufacturer_repository.select(id)
+    products = product_repository.filter_products_by_manufacturer(manufacturer)
+    return render_template("manufacturers/products_list.html", manufacturer=manufacturer, products=products)

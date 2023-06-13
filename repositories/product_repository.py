@@ -51,3 +51,14 @@ def update(product):
     values = [product.manufacturer.id, product.title, product.description, product.stock_quantity, product.buying_cost, product.selling_price, product.id]
     # print(values)
     run_sql(sql, values)
+
+
+def filter_products_by_manufacturer(manufacturer):
+    products = []
+    sql = "SELECT * FROM products WHERE manufacturer_id = %s"
+    values = [manufacturer.id]
+    results = run_sql(sql, values)
+    for row in results:
+        product = Product(manufacturer, row['title'], row['description'], row['stock_quantity'], row['buying_cost'], row['selling_price'], row['id'])
+        products.append(product)
+    return products
