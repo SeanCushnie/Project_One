@@ -8,8 +8,11 @@
             <div class="name">
                 <h2>Manufacturer Name: </h2> {{manufacturer.name}}
             </div>
+            <div class = "filter_product_by_manufacturer">
+                <h3> <a href="/manufacturers/{{manufacturer.id}}/edit">Edit Manufacturer</a></h3>
+            </div>
             <div class="Edit Manufacturer"></div>
-            <h3><a href="/manufacturers/{{manufacturer.id}}/edit">Edit Manufacturer</a></h3>
+            <h3><a href="/manufacturers/{{manufacturer.id}}/showlist"> View {{manufacturer.name }} products</a></h3>
             <form class="delete-form" action="/manufacturers/{{manufacturer.id}}/delete" method="POST">
                 <button class="trash-button"><i class="fa fa-trash-o fa-2x" style="color:red" aria-hidden="true"></i></button>
             </form>

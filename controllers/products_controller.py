@@ -131,4 +131,4 @@ def delete_manufacturer(id):
 def filter_products_by_manufacturer(id):
     manufacturer = manufacturer_repository.select(id)
     products = product_repository.filter_products_by_manufacturer(manufacturer)
-    return render_template("manufacturers/products_list.html", manufacturer=manufacturer, products=products)
+    return render_template("manufacturers/products_list.html", manufacturer=manufacturer, product_list=products)
