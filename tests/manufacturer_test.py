@@ -12,3 +12,6 @@ class TestManufacturer(unittest.TestCase):
 
     def test_manufacturer_has_id(self):
         self.assertEqual(1, self.manufacturer.id)
+    
+    def test_manufacturer_links_with_product_via_id(self):
+        self.assertEqual(1, self.product.manufacturer)

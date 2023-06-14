@@ -17,3 +17,7 @@ product_repository.save(product_1)
 product_2 = Product(manufacturer_2, "EVXB/20L/LE", "Non-Emergency Floodlight, Zone 1, 20980lm", 5, 2500, 3500)
 product_repository.save(product_2)
 
+# Test: ensuring products and manufacturers are being added:
+manufacturer_repository.select_all
+product_repository.select_all
+
