@@ -19,5 +19,11 @@ class TestProduct(unittest.TestCase):
     def test_product_has_stock_quantity(self):
         self.assertEqual(5, self.product.stock_quantity)
     
+    def test_product_has_buying_cost(self):
+        self.assertEqual(10, self.product.buying_cost)
+    
+    def test_product_has_selling_price(self):
+        self.assertEqual(20, self.product.selling_price)
+    
     
     
